@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <p>オブジェクトのみにしてname値を単純繰り返し</p>
+      <p>
+        プロパティを全部nameにすると上書きされるのか、最後の要素だけ表示されるNG
+      </p>
+      <p>プロパティをそれぞれ変えるとうまくいく</p>
+
+      <ul>
+        <li v-for="doc in docs">{{doc}}</li>
+      </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          docs: {
+            name: "福岡",
+            name1: "大分",
+            name2: "熊本",
+            name3: "長崎",
+          },
+        },
+        methods: {},
+      });
+    </script>
+  </body>
+</html>

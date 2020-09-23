@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <p>配列のみにして単純繰り返し</p>
+      <ul>
+        <li v-for="doc in docs">{{doc}}</li>
+      </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          docs: ["北海道", "青森県", "岩手県", "宮城県"],
+        },
+        methods: {},
+      });
+    </script>
+  </body>
+</html>

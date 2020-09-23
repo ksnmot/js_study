@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <p>配列+ハッシュで各要素のname値を繰り返し</p>
+
+      <ul>
+        <li v-for="doc in docs">{{doc.pref}}</li>
+      </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          docs: [
+            { name: "大阪", pref: 14 },
+            { name: "京都", pref: 15 },
+            { name: "滋賀", pref: 16 },
+            { name: "奈良", pref: 2020 },
+          ],
+        },
+        methods: {},
+      });
+    </script>
+  </body>
+</html>
