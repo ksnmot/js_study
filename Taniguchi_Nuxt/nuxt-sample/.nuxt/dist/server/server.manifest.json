@@ -1,0 +1,27 @@
+{
+  "entry": "server.js",
+  "files": {
+    "pages/about.js": "pages/about.js",
+    "pages/axios.js": "pages/axios.js",
+    "pages/blog/_category/_page.js": "pages/blog/_category/_page.js",
+    "pages/blog/_category/index.js": "pages/blog/_category/index.js",
+    "pages/blog/_id.js": "pages/blog/_id.js",
+    "pages/blog/index.js": "pages/blog/index.js",
+    "pages/element.js": "pages/element.js",
+    "pages/index.js": "pages/index.js",
+    "pages/todos.js": "pages/todos.js",
+    "server.js": "server.js"
+  },
+  "maps": {
+    "pages/about.js": "pages/about.js.map",
+    "pages/axios.js": "pages/axios.js.map",
+    "pages/blog/_category/_page.js": "pages/blog/_category/_page.js.map",
+    "pages/blog/_category/index.js": "pages/blog/_category/index.js.map",
+    "pages/blog/_id.js": "pages/blog/_id.js.map",
+    "pages/blog/index.js": "pages/blog/index.js.map",
+    "pages/element.js": "pages/element.js.map",
+    "pages/index.js": "pages/index.js.map",
+    "pages/todos.js": "pages/todos.js.map",
+    "server.js": "server.js.map"
+  }
+}

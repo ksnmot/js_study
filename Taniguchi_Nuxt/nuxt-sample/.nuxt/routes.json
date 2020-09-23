@@ -1,0 +1,56 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "/Users/tom/Desktop/Development/study/Taniguchi_Nuxt/nuxt-sample/pages/about.vue",
+    "chunkName": "pages/about"
+  },
+  {
+    "name": "axios",
+    "path": "/axios",
+    "component": "/Users/tom/Desktop/Development/study/Taniguchi_Nuxt/nuxt-sample/pages/axios.vue",
+    "chunkName": "pages/axios"
+  },
+  {
+    "name": "blog",
+    "path": "/blog",
+    "component": "/Users/tom/Desktop/Development/study/Taniguchi_Nuxt/nuxt-sample/pages/blog/index.vue",
+    "chunkName": "pages/blog/index"
+  },
+  {
+    "name": "element",
+    "path": "/element",
+    "component": "/Users/tom/Desktop/Development/study/Taniguchi_Nuxt/nuxt-sample/pages/element.vue",
+    "chunkName": "pages/element"
+  },
+  {
+    "name": "todos",
+    "path": "/todos",
+    "component": "/Users/tom/Desktop/Development/study/Taniguchi_Nuxt/nuxt-sample/pages/todos.vue",
+    "chunkName": "pages/todos"
+  },
+  {
+    "name": "blog-category",
+    "path": "/blog/:category",
+    "component": "/Users/tom/Desktop/Development/study/Taniguchi_Nuxt/nuxt-sample/pages/blog/_category/index.vue",
+    "chunkName": "pages/blog/_category/index"
+  },
+  {
+    "name": "blog-id",
+    "path": "/blog/:id",
+    "component": "/Users/tom/Desktop/Development/study/Taniguchi_Nuxt/nuxt-sample/pages/blog/_id.vue",
+    "chunkName": "pages/blog/_id"
+  },
+  {
+    "name": "blog-category-page",
+    "path": "/blog/:category/:page",
+    "component": "/Users/tom/Desktop/Development/study/Taniguchi_Nuxt/nuxt-sample/pages/blog/_category/_page.vue",
+    "chunkName": "pages/blog/_category/_page"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/tom/Desktop/Development/study/Taniguchi_Nuxt/nuxt-sample/pages/index.vue",
+    "chunkName": "pages/index"
+  }
+]
