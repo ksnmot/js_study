@@ -6,8 +6,10 @@
       </v-flex>
 
       <v-flex xs12 mt-5 mr-5 text-right>
-        <v-btn @click="$router.push({ name: 'addresses_edit' })">移動</v-btn>
+        <!-- 以下実装だと何故かページ遷移できない-->
+        <!--<v-btn @click="$router.push({ name: 'addresses_edit' })">移動</v-btn> -->
 
+        <!-- 以下実装だと問題なくページ遷移できる-->
         <router-link :to="{ name: 'address_edit' }">
           <v-btn color="info">
             連絡先追加

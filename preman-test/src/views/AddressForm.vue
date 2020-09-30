@@ -23,14 +23,16 @@
                 label="住所"
               ></v-text-field>
               <div class="text-center">
+                <!-- 以下実装だと問題なくページ遷移できる-->
                 <v-btn @click="$router.push({ name: 'addresses' })"
                   >キャンセル</v-btn
                 >
-                <router-link :to="{ name: 'address_edit' }">
+                <!-- 以下実装だと何故かページ遷移できない-->
+                <!-- <router-link :to="{ name: 'address_edit' }">
                   <v-btn color="info">
                     キャンセル2
                   </v-btn>
-                </router-link>
+                </router-link> -->
 
                 <v-btn color="info" class="ml-2">保存</v-btn>
               </div>
