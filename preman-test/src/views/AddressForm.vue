@@ -34,7 +34,7 @@
                   </v-btn>
                 </router-link> -->
 
-                <v-btn color="info" class="ml-2">保存</v-btn>
+                <v-btn color="info" class="ml-2" @click="submit">保存</v-btn>
               </div>
             </v-form>
           </v-card-text>
@@ -45,11 +45,20 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   data() {
     return {
       address: {},
     };
+  },
+  methods: {
+    submit() {
+      this.addAddress(this.address);
+      this.$router.push({ name: "addresses" });
+      this.address = {};
+    },
+    ...mapMutations(["addAddress"]),
   },
 };
 </script>
