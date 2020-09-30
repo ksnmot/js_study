@@ -51,10 +51,8 @@ export default new Vuex.Store({
         firebase
           .firestore()
           .collection(`users/${getters.uid}/addresses`)
-          .add(address)
-          .then((doc) => {
-            commit("addAddress", { id: doc.id, address });
-          });
+          .add(address);
+        commit("addAddress", address);
       }
     },
   },
