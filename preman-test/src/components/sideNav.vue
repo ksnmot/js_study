@@ -31,7 +31,11 @@ export default {
   data() {
     return {
       items: [
-        { title: "ホーム", icon: "mdi-home", link: { name: "home" } },
+        {
+          title: "連絡先登録",
+          icon: "mdi-home",
+          link: { name: "address_edit" },
+        },
         { title: "連絡先一覧", icon: "mdi-menu", link: { name: "addresses" } },
       ],
     };
