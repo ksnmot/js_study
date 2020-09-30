@@ -47,13 +47,12 @@ export default new Vuex.Store({
       commit("toggleSideMenu");
     },
     addAddress({ getters, commit }, address) {
-      if (getters.uid) {
+      if (getters.uid)
         firebase
           .firestore()
           .collection(`users/${getters.uid}/addresses`)
           .add(address);
-        commit("addAddress", address);
-      }
+      commit("addAddress", address);
     },
   },
   modules: {},
