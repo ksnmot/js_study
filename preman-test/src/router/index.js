@@ -1,10 +1,16 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
 import Addresses from "../views/Addresses.vue";
 import AddressForm from "../views/AddressForm.vue";
 Vue.use(VueRouter);
 
 const routes = [
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
+  },
   {
     path: "/addresses",
     name: "addresses",
