@@ -13,11 +13,11 @@
     </v-app-bar>
     <sideNav />
 
-    <v-content>
+    <v-main>
       <v-container fluid fill-height align-start>
         <router-view />
       </v-container>
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 
@@ -35,6 +35,7 @@ export default {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.setLoginUser(user);
+        this.fetchAddresses();
         if (this.$router.currentRoute.name === "Home") {
           this.$router.push({ name: "addresses" }, () => {});
         }
@@ -53,6 +54,7 @@ export default {
       "setLoginUser",
       "logout",
       "deleteLoginUser",
+      "fetchAddresses",
     ]),
   },
 };

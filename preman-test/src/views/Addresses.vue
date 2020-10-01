@@ -3,13 +3,14 @@
     <v-layout row wrap>
       <v-flex xs12>
         <h1>連絡先一覧</h1>
+        <span class="group pa-2">
+          <v-icon>home</v-icon>
+          <v-icon>event</v-icon>
+          <v-icon>info</v-icon>
+        </span>
       </v-flex>
 
       <v-flex xs12 mt-5 mr-5 text-right>
-        <!-- 以下実装だと何故かページ遷移できない-->
-        <!--<v-btn @click="$router.push({ name: 'addresses_edit' })">移動</v-btn> -->
-
-        <!-- 以下実装だと問題なくページ遷移できる-->
         <router-link :to="{ name: 'address_edit' }">
           <v-btn color="info">
             連絡先追加
@@ -17,13 +18,14 @@
         </router-link>
       </v-flex>
 
-      <v-flex xs12 mt-5 justify-center>
+      <v-flex xs12 mt-3 justify-center>
         <v-data-table :headers="headers" :items="addresses">
-          <template v-slot:items="props">
-            <td class="text-xs-left">{{ props.item.name }}</td>
-            <td class="text-xs-left">{{ props.item.tel }}</td>
-            <td class="text-xs-left">{{ props.item.email }}</td>
-            <td class="text-xs-left">{{ props.item.address }}</td>
+          <template v-slot:[`item.actions`]="{ item }">
+            <router-link
+              :to="{ name: 'address_edit', params: { address_id: item.id } }"
+            >
+              <v-icon>home</v-icon>
+            </router-link>
           </template>
         </v-data-table>
       </v-flex>
@@ -43,9 +45,16 @@ export default {
         { text: "電話番号", value: "tel" },
         { text: "メールアドレス", value: "email" },
         { text: "住所", value: "address" },
+        { text: "操作", value: "action", sortable: false },
       ],
       addresses: [],
     };
   },
 };
 </script>
+
+<style scoped lang="scss">
+a {
+  text-decoration: none;
+}
+</style>

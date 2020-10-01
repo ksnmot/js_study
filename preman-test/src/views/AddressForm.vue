@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import { mapMutations } from "vuex";
+import { mapActions } from "vuex";
 export default {
   data() {
     return {
@@ -58,7 +58,7 @@ export default {
       this.$router.push({ name: "addresses" });
       this.address = {};
     },
-    ...mapMutations(["addAddress"]),
+    ...mapActions(["addAddress"]),
   },
 };
 </script>
