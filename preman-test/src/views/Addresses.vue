@@ -3,11 +3,6 @@
     <v-layout row wrap>
       <v-flex xs12>
         <h1>連絡先一覧</h1>
-        <span class="group pa-2">
-          <v-icon>home</v-icon>
-          <v-icon>event</v-icon>
-          <v-icon>info</v-icon>
-        </span>
       </v-flex>
 
       <v-flex xs12 mt-5 mr-5 text-right>
@@ -20,12 +15,15 @@
 
       <v-flex xs12 mt-3 justify-center>
         <v-data-table :headers="headers" :items="addresses">
-          <template v-slot:[`item.actions`]="{ item }">
+          <template v-slot:item.action="{ item }">
             <router-link
               :to="{ name: 'address_edit', params: { address_id: item.id } }"
             >
-              <v-icon>home</v-icon>
+              <v-icon small class="mr-2">mdi-pencil</v-icon>
             </router-link>
+            <v-icon small class="mr-2" @click="deleteConfirm(item.id)"
+              >mdi-delete</v-icon
+            >
           </template>
         </v-data-table>
       </v-flex>
@@ -34,6 +32,7 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   created() {
     this.addresses = this.$store.state.addresses;
@@ -49,6 +48,14 @@ export default {
       ],
       addresses: [],
     };
+  },
+  methods: {
+    deleteConfirm(id) {
+      if (confirm("削除してよろしいですか？")) {
+        this.deleteAddress({ id });
+      }
+    },
+    ...mapActions(["deleteAddress"]),
   },
 };
 </script>

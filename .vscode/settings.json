@@ -1,3 +1,10 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "cSpell.ignoreWords": [
+        "action",
+        "item",
+        "slot",
+        "v",
+        "v slot item action"
+    ]
 }
